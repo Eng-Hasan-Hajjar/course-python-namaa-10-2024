@@ -1,18 +1,49 @@
 import tkinter as tk
+from tkinter import messagebox
 
-# إنشاء نافذة رئيسية
+# دالة لتحليل الجملة بناءً على تقسيم السلسلة النصية
+def analyze_sentence():
+    sentence = entry.get().strip()  # جلب الجملة التي أدخلها المستخدم وإزالة الفراغات الزائدة
+    if not sentence:
+        messagebox.showerror("خطأ", "يرجى إدخال جملة صحيحة.")
+        return
+    
+    # تقسيم الجملة إلى كلمات
+    words = sentence.split()
+    
+    # تعريف المتغيرات الأساسية للفاعل، الفعل، المفعول به
+    subject, verb, obj = "", "", ""
+    
+    # إذا كانت الجملة تتكون من ثلاث كلمات أو أكثر، نفترض أن أول كلمة هي الفاعل، الثانية هي الفعل، والثالثة هي المفعول به
+    if len(words) >= 3:
+        subject = words[0]
+        verb = words[1]
+        obj = words[2]
+        # البقية من الجملة
+        others = " ".join(words[3:]) if len(words) > 3 else ""
+    else:
+        messagebox.showerror("خطأ", "يرجى إدخال جملة أطول.")
+        return
+
+    # إظهار النتيجة
+    result = f"الفاعل: {subject}\nالفعل: {verb}\nالمفعول به: {obj}\nالبقية: {others}"
+    messagebox.showinfo("نتيجة التحليل", result)
+
+# إعداد واجهة المستخدم باستخدام tkinter
 root = tk.Tk()
-root.title("مثال على استخدام pack")
+root.title("تحليل الجملة الإنجليزية")
 
-# إنشاء عناصر متعددة
-label1 = tk.Label(root, text="العنصر الأول")
-label2 = tk.Label(root, text="العنصر الثاني")
-label3 = tk.Label(root, text="العنصر الثالث")
+# تعليمات المستخدم
+label = tk.Label(root, text="أدخل جملة صحيحة قواعدياً باللغة الإنجليزية:")
+label.pack(pady=10)
 
-# استخدام pack مع pady لتحديد المسافات
-label1.pack(pady=10)  # مسافة 10 بكسل أعلى وأسفل العنصر الأول
-label2.pack(pady=(5, 15))  # مسافة 5 بكسل أعلى و15 بكسل أسفل العنصر الثاني
-label3.pack(pady=0)  # بدون مسافات عمودية للعنصر الثالث
+# مربع الإدخال للمستخدم
+entry = tk.Entry(root, width=50)
+entry.pack(pady=5)
 
-# بدء واجهة المستخدم
+# زر للتحليل
+analyze_button = tk.Button(root, text="تحليل", command=analyze_sentence)
+analyze_button.pack(pady=10)
+
+# بدء حلقة الأحداث
 root.mainloop()
