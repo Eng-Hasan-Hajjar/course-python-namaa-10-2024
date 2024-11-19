@@ -97,3 +97,18 @@ grades=["good","Excellnt","bad","Middle","very good"]
 print("Ex10",grades)
 grades.reverse()
 print("Ex10",grades)
+
+
+##ex11
+##نسخ القائمة
+grades=["good","Excellnt","bad","Middle","very good"]
+print("Ex11",grades)
+grades_copy=grades.copy()
+print("Ex11",grades_copy)
+
+##ex12
+##الربط القائمة
+grades=["good","Excellnt","bad"]
+grades2=["Middle","very good"]
+grades3=grades+grades2
+print("Ex12",grades3)
