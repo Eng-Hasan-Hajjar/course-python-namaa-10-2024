@@ -199,5 +199,39 @@ mytuple2=("sweets2",)
 myTuple+=mytuple2
 print(myTuple)
 
+##ex22
+myTuple=("drinks","food","sweets","sweets2")
+mylist=list(myTuple)
+print(myTuple)
+mylist.remove("sweets2")
+print(mylist)
+myTuple=tuple(mylist)
+print(myTuple)
+
+##ex23
+myTuple=("drinks","food","sweets","sweets2")
+del myTuple
+
+##ex24
+myTuple=("drinks","food","sweets","sweets2")
+mylist=list(myTuple)
+print(myTuple)
+mylist.clear()
+print(mylist)
+myTuple=tuple(mylist)
+print(myTuple)
 
 
+### اسمك
+
+## منصب الوظيفة 
+## حساب الغيت هب 
+## حساب اللينكد اين
+### رقمك
+
+##################
+# الملخص 
+# الخبرات
+## التعليم + شهادات
+## المهارات
+## اللغات
