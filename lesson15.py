@@ -132,3 +132,72 @@ print(type(myTuple))
 myTuple=("drinks","food","sweets")
 print(myTuple[-2:-1])
 print(type(myTuple))
+
+
+myTuple = ("drinks", "food", "sweets")
+
+if "sweet" in myTuple:
+    print("Yes, 'sweet' is in myTuple")
+else:
+    print("No, 'sweet' is not in myTuple")
+
+tuple_rest = ("drinks", "food", "sweets")
+
+if "food" in tuple_rest:
+    print("The word 'food' exists in the tuple.")
+else:
+    print("The word 'food' is not in the tuple.")
+
+
+for i in range(len(myTuple)):
+    if myTuple[i] == "sweets":
+        print("sweets is found")
+    else:
+        print("sweets not found")
+
+
+
+my_tuple = (1, 2, 3, 4, 5)
+
+if 3 in my_tuple:
+    print("3 exists in the tuple")
+else:
+    print("3 does not exist in the tuple")
+
+
+## update for tuple
+##ex18
+myTuple=("drinks","food","sweets")
+myTuple=("drinks","food","sweets2")
+print(myTuple)
+
+##ex19
+myTuple=("drinks","food","sweets")
+mylist=list(myTuple)
+print(myTuple)
+mylist[2]="sweets2"
+
+print(mylist)
+
+
+myTuple=tuple(mylist)
+
+print(myTuple)
+
+##ex20
+myTuple=("drinks","food","sweets")
+mylist=list(myTuple)
+print(myTuple)
+mylist.append("sweets2")
+print(mylist)
+myTuple=tuple(mylist)
+print(myTuple)
+
+##ex21
+myTuple=("drinks","food","sweets")
+mytuple2=("sweets2",)
+myTuple+=mytuple2
+print(myTuple)
+
+
+
