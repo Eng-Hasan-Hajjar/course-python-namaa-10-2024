@@ -121,3 +121,41 @@ x=('key1','key2','key3')
 
 d_dict=dict.fromkeys(x)
 print("ex16",d_dict)
+
+##ex17
+
+students={
+    "student_1":{
+        "name":"Ali Mohammad",
+        "grade":90,
+        "scores":{ "math": 95 , "science":85 , "English": 90   }
+        },
+    "student_2":{
+        "name":"Ali Mohammad2",
+        "grade":90,
+        "scores":{ "math": 95 , "science":85 , "English": 90   }
+        },
+    "student_3":{
+        "name":"Ali Mohammad3",
+        "grade":90,
+        "scores":{ "math": 95 , "science":85 , "English": 90   }
+        }
+}
+## طباعة كل معلومات الطالب
+for student_id,student_info in students.items() :
+    print("student ID:", student_id )
+    print("Name:", student_info["name"] )
+    print("Grade:", student_info["grade"] )
+    for subject,score in  student_info["scores"].items():
+        print(subject,score)
+
+
+##الوصول الى درجة معينة
+mark_english2=students["student_2"]
+print(mark_english2)
+
+mark_english2=students["student_2"]["scores"]
+print(mark_english2)
+
+mark_english2=students["student_2"]["scores"]["English"]
+print(mark_english2)
