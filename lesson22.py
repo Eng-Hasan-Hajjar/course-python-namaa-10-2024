@@ -2,11 +2,12 @@
 
 import tkinter as tk
 root =tk.Tk()
+
 root.title("first 1 interface")
-root.geometry("600x600")
+root.geometry("400x600")
 
 labe3=tk.Label(root,text="grid:",font=("Arial",16),bg="red")
-labe3.grid()
+labe3.pack(side="left")
 
 label=tk.Label(root,text="name:",font=("Arial",16),bg="yellow")
 label.pack(side="left")
@@ -19,10 +20,11 @@ label2.pack()
 
 entry2=tk.Entry(root,width=30,show="*")
 entry2.pack(pady=1)
-
+#Text
 text=tk.Text(root,width=30,height=5)
 text.pack(pady=1)
 
+#Checkbutton
 var = tk.BooleanVar()
 check = tk.Checkbutton(root,text="تفعيل الخيار",variable=var)
 check.pack()
