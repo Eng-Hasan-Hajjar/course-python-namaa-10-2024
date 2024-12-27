@@ -45,7 +45,7 @@ listbox.insert(2,"blue")
 listbox.insert(3,"black")
 listbox.pack()
 
-button=tk.Button(root,text="click here",command=lambda:print("excuted"))
+button=tk.Button(root,text="click",command=lambda:print("excuted"))
 button.pack(pady=1)
 
 root.mainloop()
