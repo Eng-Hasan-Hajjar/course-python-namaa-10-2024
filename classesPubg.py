@@ -1,56 +1,5 @@
 
 
-class Animal:
-    def __init__(self, name, family, color, sound):
-        self.name = name
-        self.family = family
-        self.color = color
-        self.sound = sound
-
-    def display_characteristics(self):
-        return (f"Name: {self.name}\n"
-                f"family: {self.family}\n"
-                f"Color: {self.color}\n"
-                f"Sound: {self.sound}")
-
-animal = Animal(name="jaguar", family="tigers", color="black", sound="Roar")
-
-print(animal.display_characteristics())
-
-
-#ex1
-class Person:
-    def __init__(sdd,name,age):
-        sdd.name=name
-        sdd.age=age
-
-
-person1=Person("Hadi","22")
-person2=Person("Hadi2","25")
-
-print(person1.name)      
-print(person1.age) 
-
-##ex2
-person1.age=24
-print(person1.age) 
-
-##ex3
-del person1.age
-
-###print(person1.age)
-print(person2.age) 
-##ex4
-del person2
-###print(person2) 
-
-
-##ex5
-class u:
-    pass
-
-
-
 ##pubg
 
 class Player:
@@ -85,10 +34,6 @@ class Weapon:
         return self.name
 
 
-akm=Weapon("AKM",49)
-m416=Weapon("M416",42)
-
-
 class Vehicle:
     def __init__(self,typee,max_speed,healh=100):
         self.type=typee
@@ -106,10 +51,6 @@ class Vehicle:
             print(f"{self.type} took {damage} damage, {self.healh} health remaining")
    
 
-buggy=Vehicle("Buggy",80)
-buggy.drive("shcool")
-buggy.take_damage(20)
-
 
 class Map:
     def __init__(self,name,size):
@@ -120,7 +61,3 @@ class Map:
     def add_player(self,player):
         self.players.append(player)
         print(f"{player.name} ")    
-
-player1=Player("Hadi")
-erangle=Map("Ernagl","8*8 km")
-erangle.add_player(player1)
