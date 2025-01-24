@@ -40,3 +40,50 @@ for x in file1:
 
 file1.close()
 
+
+##ex5
+file1=open("txt_lesson30.txt","a")
+file1.write("this is new line to write into this file lesson 30")
+
+file1.close()
+
+file1=open("txt_lesson30.txt","r")
+print(file1.read())
+
+
+##ex6
+file1=open("txt_lesson30.txt","w")
+file1.write("*******this is new line to write into this file lesson 30")
+
+file1.close()
+
+file1=open("txt_lesson30.txt","r")
+print(file1.read())
+
+
+
+
+import os
+if os.path.exists("txt_lesson304.txt"):
+    print("************************the file is exist")
+    os.remove("txt_lesson304.txt")
+else:
+    print("the file is not exist")
+##ex7
+file1=open("txt_lesson304.txt","x")
+file1.write("*******this is new line to write into this file lesson 30")
+
+file1.close()
+
+file1=open("txt_lesson304.txt","r")
+print(file1.read())
+
+
+
+
+
+
+import os
+if os.path.exists("new folder"):
+    print("************************the folder is exist")
+    os.remove("new folder")
