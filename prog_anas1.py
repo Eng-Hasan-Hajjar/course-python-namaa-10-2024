@@ -10,6 +10,7 @@ sentences = [
 ]
 random_sentence = random.choice(sentences)
 
+
 root = tk.Tk()
 root.title("ايات قرانيه")
 

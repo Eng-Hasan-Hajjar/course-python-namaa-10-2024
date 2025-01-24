@@ -32,6 +32,7 @@ player1_choice = tk.Entry(root)
 player1_choice.pack()
 
 
+
 player2_label = tk.Label(root, text="Player 2: Enter rock, paper, or scissor")
 player2_label.pack()
 player2_choice = tk.Entry(root)
